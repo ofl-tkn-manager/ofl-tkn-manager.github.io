@@ -92,6 +92,12 @@ body {
   top: -1px;
 }
 
+.btn-circle:disabled,
+.btn-circle[disabled]{
+  background-color: #cccccc;
+}
+
+
 .navbar-default {
     background-image: none;
 }

@@ -1,31 +1,34 @@
 var currentAccount = "";
 
 function connectMetamask() {
-	window.ethereum.request({ method: 'eth_accounts' }).then(accountsChanged)
+	ethereum.request({ method: 'eth_accounts' })
+    .then(accountsChanged)
 	.catch((err) => {
-    // Some unexpected error.
-    // For backwards compatibility reasons, if no accounts are available,
-    // eth_accounts will return an empty array.
-    console.error(err);
-  });
+        // Some unexpected error.
+        // For backwards compatibility reasons, if no accounts are available,
+        // eth_accounts will return an empty array.
+        console.error(err);
+    });
 
 };
 
 function accountsChanged(accounts) {
-  if (accounts.length === 0) {
-    // MetaMask is locked or the user has not connected any accounts
-    console.log('Please connect to MetaMask.');
-    // disable minting and enable connecting
-    $("#btn-connect").prop("disabled",false);
-    $("#btn-mint").prop("disabled",true);
-    $("#btn-mint").prop("value", "Please connect your wallet to mint");
-  } else if (accounts[0] !== currentAccount) {
-    currentAccount = accounts[0];
-    // disable connecting and enable minting
-    $("#btn-connect").prop("disabled",true);
-    $("#btn-mint").prop("disabled",false);
-    $("#btn-mint").prop("value", "Mint!");
-  }
+    if (accounts.length === 0) {
+        // MetaMask is locked or the user has not connected any accounts
+        console.log('Please connect to MetaMask.');
+        // disable minting and enable connecting
+        $("#btn-connect").prop("disabled",false);
+        $("#btn-connect").prop("value", "Connect Metamask Wallet");
+        $("#btn-mint").prop("disabled",true);
+        $("#btn-mint").prop("value", "Please Connect Your Wallet to Mint");
+    } else if (accounts[0] !== currentAccount) {
+        currentAccount = accounts[0];
+        // disable connecting and enable minting
+        $("#btn-connect").prop("disabled",true);
+        $("#btn-connect").prop("value", "MetaMask Already Connected");
+        $("#btn-mint").prop("disabled",false);
+        $("#btn-mint").prop("value", "Mint!");
+    }
 }
 
 
@@ -36,4 +39,4 @@ function chainChanged(chainId) {
 }
 
 //const transactionHash = await window.ethereum.request({method: 'eth_sendTransaction', params: [params]})
-console.log("loaded");
+console.log("loaded js file");

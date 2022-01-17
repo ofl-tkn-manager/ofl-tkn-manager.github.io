@@ -9,7 +9,7 @@ load_photos_from_year(year){
 	    success: function (data) {
 	        //List all .png file names in the page
 	        $(data).find("a:contains(" + fileextension + ")").each(function () {
-	            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+	            var filename = this.href.replace(window.location.host, "").replace("https://", "");
 	            $(".bottom-container").append("<img src='" + dir + filename + "'>");
 	        });
 	    }
