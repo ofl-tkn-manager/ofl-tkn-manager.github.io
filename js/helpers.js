@@ -1,16 +1,18 @@
 var currentAccount = "";
 
 function connectMetamask() {
-	ethereum.request({ method: 'eth_accounts' })
-    .then(accountsChanged)
-	.catch((err) => {
-        // Some unexpected error.
-        // For backwards compatibility reasons, if no accounts are available,
-        // eth_accounts will return an empty array.
-        console.error(err);
+    ethereum.request({ method: 'eth_requestAccounts' })
+    .then(() => {
+        ethereum.request({ method: 'eth_accounts' })
+        .then(accountsChanged)
+        .catch((err) => {
+            // Some unexpected error.
+            // For backwards compatibility reasons, if no accounts are available,
+            // eth_accounts will return an empty array.
+            console.error(err);
+        });
     });
-
-};
+}
 
 function accountsChanged(accounts) {
     if (accounts.length === 0) {
