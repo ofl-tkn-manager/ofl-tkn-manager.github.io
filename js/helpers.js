@@ -48,7 +48,7 @@ const QUANTITY_TO_DATA =  {
 
 function setupPage() {
     console.log("Setting up");
-    updateButton();
+    updateButtonAndArrow();
     // this will be called when the page first loads
     ethereum.request({ method: 'eth_accounts' })
     .then(accountsChanged)
@@ -61,20 +61,31 @@ function setupPage() {
 }
 
 
-function updateButton() {
-    var h = $("body").width();
-    var newSize = h/6;
+function updateButtonAndArrow() {
+    var w = $(window).width();
+    var h = $(window).height();
+    var newSize = Math.max(120, w/6);
     $(".btn-circle").height(newSize);
     $(".btn-circle").width(newSize);
     if (newSize < 200) {
+        document.querySelector('#welcome-text').style.fontSize = "28px";
         document.querySelector('#btn-connect').style.fontSize = "14px";
     } else if (newSize > 200 && newSize < 400) {
+        document.querySelector('#btn-connect').style.fontSize = "36px";
         document.querySelector('#btn-connect').style.fontSize = "20px";
     } else {
+        document.querySelector('#btn-connect').style.fontSize = "38px";
         document.querySelector('#btn-connect').style.fontSize = "24px";
     }
+
+    // our floating arrow goes lower down on tall screens
+    if (h > w) {
+        document.querySelector('.picture-arrow').style.bottom = "20%";
+    } else {
+        document.querySelector('.picture-arrow').style.bottom = "25%";
+    }
 }
-window.onresize = updateButton;
+window.onresize = updateButtonAndArrow;
 
 
 function connectMetamask() {
