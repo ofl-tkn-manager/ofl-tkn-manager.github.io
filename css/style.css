@@ -1,0 +1,746 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Quicksand, "Avenir-light";
+    height: 100%;
+}
+
+.navbar {
+    min-height: 75px;
+}
+
+.navbar .container {
+    width: 85%;
+}
+
+#custom-nav {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    box-shadow: none;
+    z-index: 999;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+  
+#custom-nav a {
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+#custom-nav .active {
+    background-color: rgba(248, 248, 248, 0.8);
+    border-radius: 25px;
+    height: 55px;
+    margin-top: 10px;
+}
+
+#custom-nav li.active a  {
+    color: #FFB6C1;
+    margin-top: -10px;
+}
+
+#custom-nav .navbar-brand {
+    font-family: 'Yellowtail', cursive;
+    color: #FFFFFF;
+    font-size: 50px;
+    display: inline-block;
+}
+
+#custom-nav.affix {
+    background-color: rgba(248, 248, 248, 0.9);
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+  
+#custom-nav.affix a {
+    color: #AA336A;
+}
+
+#custom-nav.affix .active {
+    background-color: #AA336A;
+}
+
+#custom-nav.affix li.active a  {
+    color: rgb(248, 248, 248);
+}
+
+
+
+.btn-circle {
+  width: 200px;
+  height: 200px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #FFB6C1; 
+  color: white;
+  font-size: 20px;
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.navbar-default {
+    background-image: none;
+}
+
+.navbar-brand,
+.navbar-collapse li a {
+    line-height: 75px;
+    height: 75px;
+    display: inline-block;
+    padding-top: 0;
+}
+
+.navbar-collapse{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.navbar-toggle {
+    background: rgba(248, 248, 248, 0.8);
+    border: 0;
+    height: 55px;
+}
+
+#jumbotron2019 {
+    background: url("pictures/jumbotron2019.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2018 {
+    background: url("pictures/jumbotron2018.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2017 {
+	background: url("pictures/jumbotron2017.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2016 {
+    background: url("pictures/jumbotron2016.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2015 {
+    background: url("pictures/jumbotron2015.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2014 {
+    background: url("pictures/jumbotron2014.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+#jumbotron2013 {
+    background: url("pictures/jumbotron2013.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+.home .jumbotron {
+    background: url("pictures/jumbotron.jpg") no-repeat center center fixed;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin-bottom: 0px;
+}
+
+
+.toplogo{
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.jumbotron {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    height: 100vh;
+}
+
+.jumbotron .container {
+    position: relative;
+    top: 35%;
+}
+
+.jumbotron h1 {
+	color: #FFFFFF;
+}
+
+.home .bottom-container h1 {
+    color: #FFB6C1;
+}
+
+.arrow {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+}
+
+.arrow path {
+    stroke: #FFFFFF;
+    fill: transparent;
+    stroke-width: 3px;  
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+}
+
+.picture-arrow {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 10%;
+}
+
+.picture-arrow path {
+    stroke: #FFFFFF;
+    fill: transparent;
+    stroke-width: 3px;  
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {opacity:0}
+    50% {opacity: 1}
+}
+@-webkit-keyframes pulse {
+    0%, 100% {opacity:0}
+    50% {opacity: 1}
+}
+
+.bottom {
+    padding: 00px 100px 50px 100px;
+}
+
+.bottom-container {
+    padding: 0px 50px 50px 50px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.bottom-container img{
+    width: 33%;
+}
+
+.bottom-container .bottom-right{
+    background : url("pictures/logo.png") repeat-y ;
+    background-origin: content-box;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+.bottom-container .bottom-left{
+    flex: 1;
+}
+
+.skills .divider {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.skills .divider span {
+    font-size: 40px;
+    background-color: white;
+    padding: 0 10px;
+    color: #7a8491;
+}
+
+
+.gallery .divider {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.gallery .divider span {
+    font-size: 40px;
+    background-color: white;
+    padding: 0 10px;
+    color: #7a8491;
+}
+
+.main {
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    margin-bottom: 200px;
+}
+
+.skills{
+    background-color: #FFB6C1;
+}
+
+.skills .top {
+    background: url("pictures/gallery_jumbotron.jpg") no-repeat center center fixed;
+    height: 75vh;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.skills .bottom {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: -25vh;
+    background-color: white;
+    padding: 5% 10% 0 10%;
+}
+
+.skills .bottom h1{
+    font-size: 46pt;
+    color: #800000;
+    text-align: center;
+}
+
+
+.skills .bottom .bio{
+}
+
+.skills .bottom .photo{
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.skills h1 {
+    color: #FFB6C1;
+}
+
+.skills h3 {
+    color: #7a8491;
+}
+
+
+.gallery{
+    background-color: #FFB6C1;
+}
+
+.gallery .top {
+    background: url("pictures/gallery_jumbotron.jpg") no-repeat center center fixed;
+    height: 75vh;
+    position: relative;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.gallery .bottom {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: -25vh;
+    background-color: white;
+    padding: 5% 10% 0 10%;
+}
+
+.gallery .bottom h1{
+    font-size: 46pt;
+    color: #800000;
+    text-align: center;
+}
+
+
+.gallery .bottom .bio{
+}
+
+.gallery .bottom .photo{
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.gallery h1 {
+    color: #FFB6C1;
+}
+
+.gallery h3 {
+    color: #7a8491;
+}
+
+.pictures {
+    background-color: black;
+    text-align: center;
+}
+.pictures .divider h1{
+    color: #FFB6C1;
+    margin: 0;
+}
+
+.pictures .divider h4 {
+    color: #D3D3D3;
+    margin: 0;
+}
+
+.pictures .divider {
+    height: 110vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 25%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.divider i {
+    color: #FFB6C1;
+    font-size: 20pt;
+}
+
+.hide-this {
+    display: none;
+}
+
+.navbar-brand:hover .hide-this{
+    display: inline-block;
+    width: 100%;
+}
+
+.navbar-brand-img {
+    padding-right: 20px;
+}
+
+#top-icon{
+    display: inline-block;
+}
+
+#pic0{
+    background: url('pictures/main/flan0.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+
+#pic1 { 
+    background: url('pictures/main/flan1.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+#pic2 { 
+    background: url('pictures/main/flan2.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+#pic3 { 
+    background: url('pictures/main/flan3.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+#pic4 { 
+    background: url('pictures/main/flan4.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+#pic5 { 
+    background: url('pictures/main/flan5.jpeg') no-repeat center center fixed;
+    background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+}
+
+
+.pictures .pic {
+    height: 100vh;
+    width: 100%;
+}
+
+.divider-mobile {
+    display: none;
+}
+
+
+.contact .top {
+    text-shadow: black 0.1em 0.1em 0.1em;
+    height: 100vh;
+    background: url('pictures/contact_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.contact h1 {
+    margin: 0;
+    color: white;
+    display: inline;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info {
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+.typed-container {
+    position: relative;
+    top: 35%;
+    text-align: center;
+}
+
+
+.typed-cursor{
+    font-size: 35pt;
+    color: white;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.long-form {
+    padding: 5%;
+    background-color: black;
+    font-size: 32pt;
+    color: #FFB6C1;
+}
+
+.footer {
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 15pt;
+
+}
+
+.footer ul {
+    margin-top: 20px;
+    padding: 0 20px 0 20px;
+    width: 100%
+}
+
+.footer ul li {
+    display: inline;
+    float: left;
+    width: 33%;
+    color: #FFB6C1;
+}
+
+.footer ul li a:hover{
+    text-decoration: none;
+}
+
+.footer-logo {
+    color: #FFB6C1;
+}
+
+.footer-logo:hover{
+    color: #963030;
+}
+
+@media screen and (max-width: 1025px) {
+    .pictures .pic {
+        display: none;
+    }
+    .pictures .divider-mobile {
+        display: inline-block;
+        height: 110vh;
+        width: 100%;
+        background-color: black;
+        position: relative;
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+    .pictures img {
+        position: absolute;
+        left: 0;
+        top: 0vh;
+        width: 100%;
+        z-index: 0;
+    }
+    .skills .bottom {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 10pt;
+        height: 100px;
+    }
+    .navbar .container {
+        width: 100%;
+    }
+    .bottom {
+        padding: 10px 5px 10px 5px;
+    }
+    .jumbotron {
+        height: 80vh;
+    }
+    .skills .bottom {
+        width: 90%;
+        left: 5%;
+        padding: 10px 10px 0 10px;
+    }
+    .main {
+        margin-bottom: 100px;
+    }
+}
+
+@media print {
+
+    .footer {
+        display: none;
+    }
+
+    .skills .top {
+        display: none;
+    }
+    
+    .bottom {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .skills a {
+        display: none;
+    }
+
+    .pictures .divider {
+        height: 50vh;
+        background-color: white;
+    }
+
+    .pictures #div1 {
+        height: 100vh;
+    }
+
+    .pic {
+        display: none;
+    }
+
+    .divider-mobile {
+        display: inline-block;
+        height: 50vh;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h1, h3, p, a {
+        color: black;
+    }
+
+    .contact .typed {
+        display: none;
+    }
+
+    .contact #for-print,
+    .contact .contact-info h1 {
+        display: inline-block;
+    }
+    
+}
+
+
+
+

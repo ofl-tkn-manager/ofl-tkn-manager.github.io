@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MIT Cheerleading - 2016 Photos</title>
+    <link rel="icon" href="../css/pictures/bow.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts-quicksand.css" />
+    <link rel='stylesheet' type='text/css' href='../css/fonts-yellowtail.css'>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <script src="../js/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/typed.js"></script>
+
+    <script type=text/JavaScript>
+        
+        $(window).scroll(function() {
+            if ($(".navbar").offset().top > 1) {
+                $('#custom-nav').addClass('affix');
+            } else {
+                $('#custom-nav').removeClass('affix');
+            } 
+        });
+        
+
+        $(document).ready(function(){
+            $(".jumbotron h1").hide();
+            $(".arrow").hide();
+            $(".contact-info h1").hide();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="custom-nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../" style="display: flex">
+                    <div class="navbar-brand-img"><img id="top-icon" src="../css/pictures/megaphone2.png" alt="bow" /></div>
+                    <div class="hide-this">MIT Cheer</div>
+                </a>  
+            </div>
+
+            <nav class="collapse navbar-collapse">
+                <ul class="nav nav-pills navbar-right">
+                    <li ><a href="../">Home</a></li>
+                    <li class="active"><a href="./">Gallery</a></li>
+                    <li ><a href="../officers">Officers</a></li>
+                    <li ><a href="../team">The Team</a></li>
+                    <li ><a href="../coaching">Coaching</a></li>
+                    <li ><a href="../alumni">Alumni</a></li>
+                    <li ><a href="../contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        
+    <div class="home">
+        <div id="top">
+            <div class="jumbotron" id="jumbotron2016">
+                <div class="container">
+                    <h1 id="hello">MIT Cheerleading 2015-2016</h1>
+                </div>
+                <svg class="arrow">
+                   <path d="M0 0 L30 32 L60 0"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="bottom-container" style="padding:0px; flex-direction: column; flex: 1;">
+
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            
+            $('#hello').fadeIn(500, function() {
+                $('.arrow').fadeIn(1000);
+            });
+            
+        });
+        </script>
+        <!--Loading the photos from the year-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var dir = "../css/pictures/2016/";
+                var fileextension = ".jpg";
+                var count = 0;
+                var current = 1;
+                var added = false;
+                $.ajax({
+                    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                    url: dir,
+                    success: function (data) {
+                        $(".bottom-container").append("</div>");
+                        $(".bottom-container").append("<div id='1' style='flex:1'>");
+                            $(data).find("a").attr("href", function (i, val) {
+                            if( val.match(/\.(jpe?g|png|gif)$/) ) {
+                                var container = "#" + String(current); 
+                                $(container).append("<img src='" + dir + val + "' style='padding: 3px;'>");
+                                count += 1;
+                                added = true;
+                                if(count == 3){
+                                    count = 0;
+                                    current += 1;
+                                    $(".bottom-container").append("</div>");
+                                    $(".bottom-container").append("<div id='" + current + "'>");
+                                }
+                            }
+                        });
+                        }
+                    });
+                });
+        </script>
+    </div>
+
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a class="footer-logo fa fa-facebook fa-4x" href="https://www.facebook.com/mitcheerleading/" target="_blank"></a></li>
+            <li><a class="footer-logo fa fa-instagram fa-4x" href="https://www.instagram.com/mit_cheer/" target="_blank"></a></li>
+            <li><a class="footer-logo fa fa-twitter fa-4x" href="https://twitter.com/mitcheersquad" target="_blank"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

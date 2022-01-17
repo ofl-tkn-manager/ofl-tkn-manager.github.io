@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OnlyFlans - The Team</title>
+    <link rel="icon" href="./css/pictures/flan.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fonts-quicksand.css" />
+    <link rel='stylesheet' type='text/css' href='./css/fonts-yellowtail.css'>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script src="./js/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/helpers.js"></script>
+
+    <script src="./js/typed.js"></script>
+
+    <script type=text/JavaScript>
+        ethereum.on('chainChanged', chainChanged);
+        $(document).ready(function(){
+            $(".contact-info h1").hide();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="custom-nav" class="navbar navbar-default navbar-fixed-top affix">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./" style="display: flex">
+                    <div class="navbar-brand-img"><img id="top-icon" src="./css/pictures/flan.png" alt="flan" /></div>
+                    <div class="hide-this">OnlyFlans</div>
+                </a>  
+            </div>
+
+            <nav class="collapse navbar-collapse">
+                <ul class="nav nav-pills navbar-right">
+                    <li class="active"><a href="./">Home</a></li>
+                    <li ><a href="./trail">The Trail</a></li>
+                    <li ><a href="./team">The Team</a></li>
+                    <li ><a href="./tech">The Tech</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+         
+    <div class="pictures">
+        <div id="div1" class="divider">
+            <h1>Welcome to OnlyFlans! The sweetest, sultriest, most sensual desserts now available in your area - and they want to meet you!</h1>
+            <br>
+            <div class="btn-connect"> <button id="btn-connect" type="button" class="btn-circle" onclick="connectMetamask()">Connect Metamask Wallet</button> <button id="btn-mint" type="button" class="btn-circle" disabled=true>Please Connect Your Wallet To Mint</button> </div>
+            
+            
+            <br>
+            <svg class="picture-arrow">
+               <path d="M0 0 L30 32 L60 0"></path>
+            </svg>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.picture-arrow').fadeIn(1000);
+                });
+            </script>
+        </div>
+        <!-- OnlyFlans Promo photo html -->
+        <div class="pic" id="pic0">
+        </div>
+        <div class="divider-mobile">
+            <img src="./css/pictures/main/flan0.jpeg" alt="Full Team"/>
+        </div>
+        <!-- End of full team html. Start of members html -->
+
+         <div style="width: 100%; height: 3px; background-color: #963030;"></div>
+        <div class="divider">
+            <h1>Placeholder #1</h1>
+            <br>
+            <h4><span id="bio1">Hopefully some text will go here. This comes first so it will probably explain the project</span></h4>
+            <br>
+        </div>
+        <div class="pic" id="pic1">
+        </div>
+        <div class="divider-mobile">
+            <img src="./css/pictures/main/flan1.jpeg" alt="Member"/>
+        </div> 
+        
+         <div style="width: 100%; height: 3px; background-color: #963030;"></div>
+        <div class="divider">
+            <h1>Placeholder #2</h1>
+            <br>
+            <h4><span id="bio1">Hopefully some text will go here. This comes second so maybe it's some demo images? Maybe the roadmap?</span></h4>
+            <br>
+        </div>
+        <div class="pic" id="pic2">
+        </div>
+        <div class="divider-mobile">
+            <img src="./css/pictures/main/flan2.jpeg" alt="Member"/>
+        </div> 
+        
+         <div style="width: 100%; height: 3px; background-color: #963030;"></div>
+        <div class="divider">
+            <h1>Placeholder #3</h1>
+            <br>
+            <h4><span id="bio1">Hopefully some text will go here. This comes third so maybe it's the team if we don't make the team their own page.</span></h4>
+            <br>
+        </div>
+        <div class="pic" id="pic3">
+        </div>
+        <div class="divider-mobile">
+            <img src="./css/pictures/main/flan3.jpeg" alt="Member"/>
+        </div> 
+        
+   <div style="width: 100%; height: 3px; background-color: #963030;"></div>
+        <div class="divider">
+            <h1>Placeholder #4</h1>
+            <br>
+            <h4><span id="bio1">Hopefully some text will go here. This is last. Is this the mint button?</span></h4>
+            <br>
+        </div>
+        <div class="pic" id="pic4">
+        </div>
+        <div class="divider-mobile">
+            <img src="./css/pictures/main/flan4.jpeg" alt="Member"/>
+        </div> 
+    
+    </div>
+
+    <div class="long-form">
+
+        <h1> Something long-form </h1>
+
+        We can put long-form text down here if we have something where we don't want infinite scrolling, and want more of a full-page sort of experience.
+
+        It can also have some other graphics.
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+        <br>
+        lorem ipsum
+    </div>
+    
+    <div class="footer">
+        <ul>
+            <li><a class="footer-logo fa fa-facebook fa-4x" href="https://www.facebook.com/mitcheerleading/" target="_blank"></a></li>
+            <li><a class="footer-logo fa fa-instagram fa-4x" href="https://www.instagram.com/mit_cheer/" target="_blank"></a></li>
+            <li><a class="footer-logo fa fa-twitter fa-4x" href="https://twitter.com/mitcheersquad" target="_blank"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
