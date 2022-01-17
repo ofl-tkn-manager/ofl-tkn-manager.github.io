@@ -28,10 +28,8 @@
     <script src="./js/typed.js"></script>
 
     <script type=text/JavaScript>
+        $(document).ready(setupPage());
         ethereum.on('chainChanged', chainChanged);
-        $(document).ready(function(){
-            $(".contact-info h1").hide();
-        });
     </script>
 
 </head>
