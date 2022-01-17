@@ -252,7 +252,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -30px;
-    bottom: 10%;
+    bottom: 22%;
 }
 
 .picture-arrow path {
@@ -330,114 +330,10 @@ body {
 .main {
     position: relative;
     z-index: 100;
-    background: #fff;
-    margin-bottom: 200px;
+    background: #000;
+    margin-bottom: 100px;
 }
 
-.skills{
-    background-color: #FFB6C1;
-}
-
-.skills .top {
-    background: url("pictures/gallery_jumbotron.jpg") no-repeat center center fixed;
-    height: 75vh;
-    position: relative;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-}
-
-.skills .bottom {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: -25vh;
-    background-color: white;
-    padding: 5% 10% 0 10%;
-}
-
-.skills .bottom h1{
-    font-size: 46pt;
-    color: #800000;
-    text-align: center;
-}
-
-
-.skills .bottom .bio{
-}
-
-.skills .bottom .photo{
-    background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -webkit-background-size: contain;
-    align-content: center;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-
-.skills h1 {
-    color: #FFB6C1;
-}
-
-.skills h3 {
-    color: #7a8491;
-}
-
-
-.gallery{
-    background-color: #FFB6C1;
-}
-
-.gallery .top {
-    background: url("pictures/gallery_jumbotron.jpg") no-repeat center center fixed;
-    height: 75vh;
-    position: relative;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-}
-
-.gallery .bottom {
-    position: relative;
-    width: 70%;
-    left: 15%;
-    top: -25vh;
-    background-color: white;
-    padding: 5% 10% 0 10%;
-}
-
-.gallery .bottom h1{
-    font-size: 46pt;
-    color: #800000;
-    text-align: center;
-}
-
-
-.gallery .bottom .bio{
-}
-
-.gallery .bottom .photo{
-    background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -webkit-background-size: contain;
-    align-content: center;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-
-.gallery h1 {
-    color: #FFB6C1;
-}
-
-.gallery h3 {
-    color: #7a8491;
-}
 
 .pictures {
     background-color: black;
@@ -709,6 +605,20 @@ body {
     float: left;
     width: 100%;
 
+}
+
+#wallet-info {
+    color: white;
+    display: none;
+    width: 100%;
+    padding: 5px;
+}
+
+#chain-info {
+    color: white;
+    display: none;
+    width: 100%;
+    padding: 5px;
 }
 
 @media screen and (max-width: 1025px) {
