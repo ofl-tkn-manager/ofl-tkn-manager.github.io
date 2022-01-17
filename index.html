@@ -54,9 +54,8 @@
             <nav class="collapse navbar-collapse">
                 <ul class="nav nav-pills navbar-right">
                     <li class="active"><a href="./">Home</a></li>
-                    <li ><a href="./trail">The Trail</a></li>
-                    <li ><a href="./team">The Team</a></li>
-                    <li ><a href="./tech">The Tech</a></li>
+                    <li ><a href="#roadmap">The Trail</a></li>
+                    <li ><a href="#tech">The Tech</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,7 +66,22 @@
         <div id="div1" class="divider">
             <h1>Welcome to OnlyFlans! The sweetest, sultriest, most sensual desserts now available in your area - and they want to meet you!</h1>
             <br>
-            <div class="btn-connect"> <button id="btn-connect" type="button" class="btn-circle" onclick="connectMetamask()">Connect Metamask Wallet</button> <button id="btn-mint" type="button" class="btn-circle" disabled=true>Please Connect Your Wallet To Mint</button> </div>
+            <div class="btn-connect">
+                <div class="metamask">
+                    <button id="btn-connect" type="button" class="btn-circle" onclick="connectMetamask()">Connect Metamask Wallet</button>
+                </div>
+                <div class="metamask">
+                    <button id="btn-mint" type="button" class="btn-circle" disabled=true>Connect Your Wallet In Order To Mint</button>
+
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus" onclick="clickMinus(); return false;"><span class="quantity_text">-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus" onclick="clickPlus(); return false;"><span class="quantity_text">+</span></a>
+                    </div>
+                </div>
+
+
+            </div>
             
             
             <br>
@@ -89,7 +103,7 @@
         <!-- End of full team html. Start of members html -->
 
          <div style="width: 100%; height: 3px; background-color: #963030;"></div>
-        <div class="divider">
+        <div class="divider" id="roadmap">
             <h1>Placeholder #1</h1>
             <br>
             <h4><span id="bio1">Hopefully some text will go here. This comes first so it will probably explain the project</span></h4>
@@ -102,7 +116,7 @@
         </div> 
         
          <div style="width: 100%; height: 3px; background-color: #963030;"></div>
-        <div class="divider">
+        <div class="divider" id="tech">
             <h1>Placeholder #2</h1>
             <br>
             <h4><span id="bio1">Hopefully some text will go here. This comes second so maybe it's some demo images? Maybe the roadmap?</span></h4>
@@ -175,7 +189,7 @@
         lorem ipsum
         <br>
         lorem ipsum
-    </div>
+    </div>g
     
     <div class="footer">
         <ul>

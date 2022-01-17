@@ -22,7 +22,7 @@ function accountsChanged(accounts) {
         $("#btn-connect").prop("disabled",false);
         $("#btn-connect").prop("value", "Connect Metamask Wallet");
         $("#btn-mint").prop("disabled",true);
-        $("#btn-mint").prop("value", "Please Connect Your Wallet to Mint");
+        $("#btn-mint").prop("value", "Connect Your Wallet to Mint");
     } else if (accounts[0] !== currentAccount) {
         currentAccount = accounts[0];
         // disable connecting and enable minting
@@ -39,6 +39,25 @@ function chainChanged(chainId) {
     // Correctly handling chain changes can be complicated, so we just reload
     window.location.reload();
 }
+
+function clickMinus() {
+    const input = $('.quantity__input');
+    var value = input.val();
+    if (value > 1) {
+      value--;
+    }
+    input.val(value);
+};
+  
+function clickPlus() {
+    const input = $('.quantity__input');
+    var value = input.val();
+    if (value < 20) {
+      value++;
+    }
+    input.val(value);
+};
+
 
 //const transactionHash = await window.ethereum.request({method: 'eth_sendTransaction', params: [params]})
 console.log("loaded js file");
