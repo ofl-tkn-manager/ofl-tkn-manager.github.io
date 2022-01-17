@@ -27,22 +27,36 @@ function connectMetamask() {
     });
 }
 
+function mint() {
+    // TODO: fill this out with contract info
+    params = {}
+    ethereum.request({method: 'eth_sendTransaction', params: [params]}).then((transactionHash) => {
+        console.log(transactionHash);
+    }).catch((err) => {
+        console.error("User rejected metamask transaction");
+        console.error(err);
+    });
+}
+
 function accountsChanged(accounts) {
     console.log(accounts);
     if (accounts.length === 0) {
         // MetaMask is locked or the user has not connected any accounts
         // disable minting and enable connecting
-        $("#btn-connect").prop("disabled",false);
-        $("#btn-connect").prop("value", "Connect Metamask Wallet");
-        $("#btn-mint").prop("disabled",true);
-        $("#btn-mint").prop("value", "Connect Your Wallet In Order To Mint");
+        console.log("Hiding");
+        document.querySelector('#btn-connect').innerText = "Connect Metamask Wallet To Enable Minting";
+        document.querySelector('#wallet-info').style.display = "none";
+        document.querySelector('.quantity').style.display = "none";
+        $('#btn-connect').click(connectMetamask());
     } else if (accounts[0] !== currentAccount) {
         currentAccount = accounts[0];
         // disable connecting and enable minting
-        $("#btn-connect").prop("disabled",true);
-        $("#btn-connect").prop("value", "MetaMask Already Connected");
-        $("#btn-mint").prop("disabled",false);
-        $("#btn-mint").prop("value", "Mint!");
+        document.querySelector('#btn-connect').innerText = "Click To Mint";
+        // unhide 
+        document.querySelector('#wallet-info').innerText = "Detected Wallet Address is: " + currentAccount;
+        document.querySelector('#wallet-info').style.display = "flex";
+        document.querySelector('.quantity').style.display = "flex";
+        $('#btn-connect').click(mint());
     }
 }
 
@@ -74,5 +88,4 @@ function clickPlus() {
 $
 
 
-//const transactionHash = await window.ethereum.request({method: 'eth_sendTransaction', params: [params]})
 console.log("loaded js file");

@@ -67,10 +67,7 @@
             <div class="btn-connect">
                 <div class="metamask">
                     <button id="btn-connect" type="button" class="btn-circle" onclick="connectMetamask()">Connect Metamask Wallet</button>
-                </div>
-                <div class="metamask">
-                    <button id="btn-mint" type="button" class="btn-circle" disabled=true>Connect Your Wallet In Order To Mint</button>
-
+                    <span id="wallet-info">Detected Wallet Address is: </span>
                     <div class="quantity">
                         <a href="#" class="quantity__minus" onclick="clickMinus(); return false;"><span class="quantity_text">-</span></a>
                         <input name="quantity" type="text" class="quantity__input" value="1">
