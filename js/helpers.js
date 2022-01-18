@@ -87,9 +87,9 @@ function updateButtonAndArrow() {
 
     // our floating arrow goes lower down on tall screens
     if (h > w) {
-        document.querySelector('.picture-arrow').style.bottom = "20%";
+        document.querySelector('.picture-arrow').style.bottom = "22%";
     } else {
-        document.querySelector('.picture-arrow').style.bottom = "25%";
+        document.querySelector('.picture-arrow').style.bottom = "20%";
     }
 }
 window.onresize = updateButtonAndArrow;
