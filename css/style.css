@@ -621,6 +621,10 @@ body {
     padding: 5px;
 }
 
+#supply {
+    color: white
+}
+
 @media screen and (max-width: 1025px) {
     .pictures .pic {
         display: none;
