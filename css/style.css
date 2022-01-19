@@ -85,6 +85,7 @@ body {
   background-color: #AA336A; 
   color: white;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-circle i {
@@ -391,6 +392,14 @@ body {
     -webkit-background-size: contain;
 }
 
+#div1 {
+    background: url('pictures/ofl-background.png') no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
 #pic1 { 
     background: url('pictures/main/flan1.jpeg') no-repeat center center fixed;
     background-size: contain;
@@ -504,7 +513,7 @@ body {
 }
 
 .footer {
-    height: 150px;
+    height: 100px;
     width: 100%;
     background-color: black;
     position: fixed;
