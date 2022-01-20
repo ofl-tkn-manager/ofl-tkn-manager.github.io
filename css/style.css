@@ -513,7 +513,7 @@ body {
 }
 
 .footer {
-    height: 100px;
+    height: 10%;
     width: 100%;
     background-color: black;
     position: fixed;
@@ -663,7 +663,7 @@ body {
 @media screen and (max-width: 768px) {
     .footer {
         font-size: 10pt;
-        height: 100px;
+        height: 80px;
     }
     .navbar .container {
         width: 100%;

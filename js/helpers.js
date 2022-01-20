@@ -37,6 +37,8 @@ const QUANTITY_TO_DATA =  {
     15: "0x6f4da3d5000000000000000000000000000000000000000000000000000000000000000f",
 };
 
+TOTAL_SUPPLY_ABI = '0x18160ddd';
+
 function setupPage() {
     // this will be called when the page first loads, but we don't know that the page is fully loaded
     console.log("Setting up");
@@ -89,7 +91,7 @@ function updateButtonAndArrow() {
     if (h > w) {
         document.querySelector('.picture-arrow').style.bottom = "22%";
     } else {
-        document.querySelector('.picture-arrow').style.bottom = "20%";
+        document.querySelector('.picture-arrow').style.bottom = "15%";
     }
 }
 window.onresize = updateButtonAndArrow;
@@ -180,9 +182,15 @@ function chainChanged(chainId) {
 
 function updateTotalSupply() {
     console.log("Updating total supply displayed");
-    // TODO: this
     var minted = "0";
-    document.querySelector("#supply").innerText = minted + "/10000 OnlyFlans have been minted.";
+    ethereum.request({method: 'eth_call', params:[{to:CONTRACT_ADDRESS, data:TOTAL_SUPPLY_ABI}, "latest"]}).then((data) => {
+        minted = parseInt(data, 16);
+        var text = minted + "/10000 OnlyFlans have been minted.";
+        if (minted == 10000) {
+            text += " Sorry that you missed the sale, but if you head over to OpenSea, you can get your Flan on the secondary!"
+        }
+        document.querySelector("#supply").innerText = text;
+    });
 }
 
 function clickMinus() {
